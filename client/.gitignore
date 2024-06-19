@@ -85,3 +85,6 @@ tsconfig.tsbuildinfo
 
 # dotenv environment variables file
 .env
+
+# package lock files
+package-lock.json
