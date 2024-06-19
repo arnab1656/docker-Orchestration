@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:latest # Use the official MongoDB image from Docker Hub
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db # Persist MongoDB data locally
+    networks:
+      - app-network
+
+  express-app:
+    build:
+      context: .
+      dockerfile: Dockerfile # Assuming your Dockerfile is named Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
