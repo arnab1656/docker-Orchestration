@@ -1,0 +1,17 @@
+# Ignore node_modules directory (for Node.js projects)
+/backend/node_modules/
+/client/node_modules/
+
+# Ignore build output directories
+/backend/dist/
+/client/build/
+
+# Ignore environment-specific files
+/backend/.env
+/client/.env
+
+# Ignore package-lock.json (if using npm)
+/backend/package-lock.json
+/client/package-lock.json
+
+# Ignore any other files or directories specific to your setup
